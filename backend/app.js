@@ -16,7 +16,7 @@ app.use(express.urlencoded({ extended: false }));
 app.use(
   cors({
     credentials: true,
-    origin: "https://mighty-badlands-34661.herokuapp.com/",
+    origin: "https://vinicius-reactgram.netlify.app/",
   })
 );
 
