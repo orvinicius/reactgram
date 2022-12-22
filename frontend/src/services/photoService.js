@@ -1,4 +1,5 @@
-import { api, requestConfig } from "../utils/config";
+import { requestConfig } from "../utils/config";
+import api from "../utils/config";
 
 // Publish an user's photo
 const publishPhoto = async (data, token) => {
