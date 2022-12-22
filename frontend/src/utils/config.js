@@ -8,7 +8,11 @@ export const requestConfig = (method, data, token = null, image = null) => {
     config = {
       method,
       body: data,
-      headers: {},
+      headers: {
+        "Content-Type": "application/json",
+        "Access-Control-Allow-Origin": "*",
+        "Access-Control-Allow-Methods": "POST,PATCH,OPTIONS",
+      },
     };
   } else if (method === "DELETE" || data === null) {
     config = {

@@ -14,7 +14,10 @@ app.use(express.urlencoded({ extended: false }));
 
 // Solve CORS
 app.use(
-  cors({ credentials: true, origin: "https://vinicius-reactgram.netlify.app" })
+  cors({
+    credentials: true,
+    origin: "https://mighty-badlands-34661.herokuapp.com/",
+  })
 );
 
 // Upload directory
