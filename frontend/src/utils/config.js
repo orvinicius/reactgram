@@ -1,5 +1,5 @@
-export const api = "https://mighty-badlands-34661.herokuapp.com/api";
-export const uploads = "https://mighty-badlands-34661.herokuapp.com/uploads";
+export const api = "https://mighty-badlands-34661.herokuapp.com";
+export const uploads = "https://mighty-badlands-34661.herokuapp.com";
 
 export const requestConfig = (method, data, token = null, image = null) => {
   let config;
