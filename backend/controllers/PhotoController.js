@@ -30,8 +30,6 @@ const insertPhoto = async (req, res) => {
   }
 
   res.status(201).json(newPhoto);
-
-  res.send("Photo insert");
 };
 
 // Remove a photo from DB

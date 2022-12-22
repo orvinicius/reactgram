@@ -6,7 +6,12 @@ const conn = async () => {
   // connect to database
   try {
     const dbConn = await mongoose.connect(
-      `mongodb+srv://${dbUser}:${dbPassword}@cluster0.yyfkjv8.mongodb.net/?retryWrites=true&w=majority`
+      process.env.MONGODB_URI ||
+        `mongodb+srv://${dbUser}:${dbPassword}@cluster0.yyfkjv8.mongodb.net/?retryWrites=true&w=majority`,
+      {
+        useNewUrlParser: true,
+        useUnifiedTopology: true,
+      }
     );
 
     console.log("DB connected!");

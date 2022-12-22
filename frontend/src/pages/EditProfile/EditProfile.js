@@ -12,7 +12,7 @@ import { profile, updateProfile, resetMessage } from "../../slices/userSlice";
 // Components
 import Message from "../../components/Message";
 
-const Profile = () => {
+const EditProfile = () => {
   const dispatch = useDispatch();
 
   const { user, message, error, loading } = useSelector((state) => state.user);
@@ -140,4 +140,4 @@ const Profile = () => {
   );
 };
 
-export default Profile;
+export default EditProfile;
