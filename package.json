@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon backend/app.js"
+    "start": "nodemon backend/app.js https://mighty-badlands-34661.herokuapp.com/"
   },
   "keywords": [],
   "author": "",
