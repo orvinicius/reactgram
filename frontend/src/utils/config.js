@@ -1,11 +1,5 @@
-import axios from "axios";
-
-const api = axios.create({
-  baseURL: process.env.REACT_APP_API_URL,
-});
+export const api = process.env.REACT_APP_API_URL;
 export const uploads = "https://mighty-badlands-34661.herokuapp.com/uploads";
-
-export default api;
 
 export const requestConfig = (method, data, token = null, image = null) => {
   let config;
