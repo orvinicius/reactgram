@@ -8,20 +8,12 @@ export const requestConfig = (method, data, token = null, image = null) => {
     config = {
       method,
       body: data,
-      headers: {
-        "Access-Control-Allow-Headers": "Content-Type",
-        "Access-Control-Allow-Origin": "https://vinicius-reactgram.netlify.app",
-        "Access-Control-Allow-Methods": "OPTIONS,POST,GET,PATCH,PUT,DELETE",
-      },
+      headers: {},
     };
   } else if (method === "DELETE" || data === null) {
     config = {
       method,
-      headers: {
-        "Access-Control-Allow-Headers": "Content-Type",
-        "Access-Control-Allow-Origin": "https://vinicius-reactgram.netlify.app",
-        "Access-Control-Allow-Methods": "OPTIONS,POST,GET,PATCH,PUT,DELETE",
-      },
+      headers: {},
     };
   } else {
     config = {
@@ -29,9 +21,8 @@ export const requestConfig = (method, data, token = null, image = null) => {
       body: JSON.stringify(data),
       headers: {
         "Content-Type": "application/json",
-        "Access-Control-Allow-Headers": "Content-Type",
-        "Access-Control-Allow-Origin": "https://vinicius-reactgram.netlify.app",
-        "Access-Control-Allow-Methods": "OPTIONS,POST,GET,PATCH,PUT,DELETE",
+        "Access-Control-Allow-Origin": "*",
+        "Access-Control-Allow-Methods": "POST,PATCH,OPTIONS",
       },
     };
   }
