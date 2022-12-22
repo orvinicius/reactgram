@@ -202,10 +202,13 @@ const Profile = () => {
             photos.map((photo) => (
               <div className="photo" key={photo._id}>
                 {photo.image && (
-                  <img
-                    src={`${uploads}/photos/${photo.image}`}
-                    alt={photo.title}
-                  />
+                  <Link className="" to={`/photos/${photo._id}`}>
+                    <img
+                      src={`${uploads}/photos/${photo.image}`}
+                      alt={photo.title}
+                      dir={`/photos/${photo._id}`}
+                    />
+                  </Link>
                 )}
                 {id === userAuth._id ? (
                   <div className="actions">
@@ -216,9 +219,7 @@ const Profile = () => {
                     <BsXLg onClick={() => handleDelete(photo._id)} />
                   </div>
                 ) : (
-                  <Link className="btn" to={`/photos/${photo._id}`}>
-                    Ver
-                  </Link>
+                  <></>
                 )}
               </div>
             ))}
