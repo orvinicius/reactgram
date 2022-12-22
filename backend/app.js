@@ -4,7 +4,7 @@ const express = require("express");
 const path = require("path");
 const cors = require("cors");
 
-const port = process.env.PORT;
+const port = process.env.PORT || 5000;
 
 const app = express();
 
@@ -13,7 +13,9 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
 // Solve CORS
-app.use(cors({ credentials: true, origin: "http://localhost:3000" }));
+app.use(
+  cors({ credentials: true, origin: "https://vinicius-reactgram.netlify.app" })
+);
 
 // Upload directory
 app.use("/uploads", express.static(path.join(__dirname, "/uploads")));
