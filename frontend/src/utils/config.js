@@ -6,6 +6,7 @@ export const requestConfig = (method, data, token = null, image = null) => {
 
   if (image) {
     config = {
+      mode: "no-cors",
       method,
       body: data,
       headers: {
@@ -16,11 +17,17 @@ export const requestConfig = (method, data, token = null, image = null) => {
     };
   } else if (method === "DELETE" || data === null) {
     config = {
+      mode: "no-cors",
       method,
-      headers: {},
+      headers: {
+        "Content-Type": "application/json",
+        "Access-Control-Allow-Origin": "*",
+        "Access-Control-Allow-Methods": "POST,PATCH,OPTIONS",
+      },
     };
   } else {
     config = {
+      mode: "no-cors",
       method,
       body: JSON.stringify(data),
       headers: {
